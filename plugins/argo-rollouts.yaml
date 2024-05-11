@@ -1,0 +1,45 @@
+apiVersion: krew.googlecontainertools.github.com/v1alpha2
+kind: Plugin
+metadata:
+  name: argo-rollouts
+spec:
+  version: v1.6.5
+  homepage: https://argo-rollouts.readthedocs.io/
+  shortDescription: Krew plugin for Argo Rollouts.
+  description: Krew plugin for Argo Rollouts.
+  platforms:
+  - selector:
+      matchLabels:
+        os: darwin
+        arch: amd64
+    uri: https://github.com/argoproj/argo-rollouts/releases/download/v1.6.5/kubectl-argo-rollouts-darwin-amd64
+    sha256: ae68da29a99d9bb7d04c543bfae79f3c2ed4246b643981b5349bcaacc6b6708b
+    bin: kubectl-argo-rollouts-darwin-amd64
+  - selector:
+      matchLabels:
+        os: darwin
+        arch: arm64
+    uri: https://github.com/argoproj/argo-rollouts/releases/download/v1.6.5/kubectl-argo-rollouts-darwin-arm64
+    sha256: 724ea5b86eb8695aea55da3d5e1a0b692fcab9cbd0a3defb5a9b88dd9ccd9ea9
+    bin: kubectl-argo-rollouts-darwin-arm64
+  - selector:
+      matchLabels:
+        os: linux
+        arch: amd64
+    uri: https://github.com/argoproj/argo-rollouts/releases/download/v1.6.5/kubectl-argo-rollouts-linux-amd64
+    sha256: eedfe7fd4e2fdb0ca6a4a0fb0aae99c072f57ac17b11184dd92f5966551aac3b
+    bin: kubectl-argo-rollouts-linux-amd64
+  - selector:
+      matchLabels:
+        os: linux
+        arch: arm64
+    uri: https://github.com/argoproj/argo-rollouts/releases/download/v1.6.5/kubectl-argo-rollouts-linux-arm64
+    sha256: 5a4ecc1e78846b57bf6c10af92b89272f3c402162bfeb1ded3f1e7a72590a514
+    bin: kubectl-argo-rollouts-linux-arm64
+  - selector:
+      matchLabels:
+        os: windows
+        arch: arm64
+    uri: https://github.com/argoproj/argo-rollouts/releases/download/v1.6.5/kubectl-argo-rollouts-windows-amd64
+    sha256: cc28fbb211aed1f8aee95f86161eeb4c0bd62a2cebe3a473b6af214c39616bee
+    bin: kubectl-argo-rollouts-windows-amd64
